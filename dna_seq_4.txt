@@ -1,0 +1,28 @@
+digraph "Debruijn graph" {rankdir="LR";
+ GAC [label="GAC"];
+ GCA [label="GCA"];
+ TGC [label="TGC"];
+ TTG [label="TTG"];
+ TGA [label="TGA"];
+ CAA [label="CAA"];
+ ATT [label="ATT"];
+ CAT [label="CAT"];
+ GGC [label="GGC"];
+ AAT [label="AAT"];
+ TGG [label="TGG"];
+ TTT [label="TTT"];
+ TGG -> GGC;
+ GGC -> GCA;
+ GCA -> CAT;
+ CAT -> ATT;
+ ATT -> TTG;
+ TTG -> TGC;
+ TGC -> GCA;
+ GCA -> CAA;
+ CAA -> AAT;
+ AAT -> ATT;
+ ATT -> TTT;
+ TTT -> TTG;
+ TTG -> TGA;
+ TGA -> GAC;
+}
